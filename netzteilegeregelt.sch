@@ -1,0 +1,438 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5F73DF25
+P 3100 1550
+F 0 "J1" H 3157 1867 50  0000 C CNN
+F 1 "12V AC" H 3157 1776 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 3150 1510 50  0001 C CNN
+F 3 "~" H 3150 1510 50  0001 C CNN
+	1    3100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole R1
+U 1 1 5F73ECD1
+P 9000 1000
+F 0 "R1" H 9100 1046 50  0000 L CNN
+F 1 "Rheostat 25W" H 9100 955 50  0000 L CNN
+F 2 "smopla:rheostat_25w" H 9000 1000 50  0001 C CNN
+F 3 "~" H 9000 1000 50  0001 C CNN
+	1    9000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F73F401
+P 8950 2550
+F 0 "R2" H 9020 2596 50  0000 L CNN
+F 1 "R" H 9020 2505 50  0000 L CNN
+F 2 "smopla:Resistor_100W" V 8880 2550 50  0001 C CNN
+F 3 "~" H 8950 2550 50  0001 C CNN
+	1    8950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 5F738DAE
+P 3500 1300
+F 0 "D1" V 3454 1220 50  0000 R CNN
+F 1 "D_Schottky" V 3545 1220 50  0000 R CNN
+F 2 "Diode_SMD:D_SMC_Handsoldering" H 3500 1300 50  0001 C CNN
+F 3 "~" H 3500 1300 50  0001 C CNN
+	1    3500 1300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D3
+U 1 1 5F73A9F0
+P 4050 1300
+F 0 "D3" V 4004 1380 50  0000 L CNN
+F 1 "D_Schottky" V 4095 1380 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC_Handsoldering" H 4050 1300 50  0001 C CNN
+F 3 "~" H 4050 1300 50  0001 C CNN
+	1    4050 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D4
+U 1 1 5F73B1C6
+P 4050 1700
+F 0 "D4" V 4004 1780 50  0000 L CNN
+F 1 "D_Schottky" V 4095 1780 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC_Handsoldering" H 4050 1700 50  0001 C CNN
+F 3 "~" H 4050 1700 50  0001 C CNN
+	1    4050 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 5F73B474
+P 3500 1700
+F 0 "D2" V 3454 1780 50  0000 L CNN
+F 1 "D_Schottky" V 3545 1780 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC_Handsoldering" H 3500 1700 50  0001 C CNN
+F 3 "~" H 3500 1700 50  0001 C CNN
+	1    3500 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J2
+U 1 1 5F73B885
+P 4900 1550
+F 0 "J2" H 4957 1867 50  0000 C CNN
+F 1 "12V DC" H 4957 1776 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 4950 1510 50  0001 C CNN
+F 3 "~" H 4950 1510 50  0001 C CNN
+	1    4900 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1450 3500 1450
+Wire Wire Line
+	3500 1550 3500 1450
+Connection ~ 3500 1450
+Wire Wire Line
+	3400 1550 3400 1500
+Wire Wire Line
+	3400 1500 4050 1500
+Wire Wire Line
+	4050 1500 4050 1450
+Wire Wire Line
+	4050 1550 4050 1500
+Connection ~ 4050 1500
+Wire Wire Line
+	3400 1650 3400 1550
+Connection ~ 3400 1550
+$Comp
+L power:+12V #PWR01
+U 1 1 5F73E255
+P 3750 1150
+F 0 "#PWR01" H 3750 1000 50  0001 C CNN
+F 1 "+12V" H 3765 1323 50  0000 C CNN
+F 2 "" H 3750 1150 50  0001 C CNN
+F 3 "" H 3750 1150 50  0001 C CNN
+	1    3750 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1150 3750 1150
+Connection ~ 3750 1150
+Wire Wire Line
+	3750 1150 3500 1150
+$Comp
+L power:GND #PWR02
+U 1 1 5F73EA3A
+P 3800 1850
+F 0 "#PWR02" H 3800 1600 50  0001 C CNN
+F 1 "GND" H 3805 1677 50  0000 C CNN
+F 2 "" H 3800 1850 50  0001 C CNN
+F 3 "" H 3800 1850 50  0001 C CNN
+	1    3800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1850 3800 1850
+Connection ~ 3800 1850
+Wire Wire Line
+	3800 1850 3500 1850
+Wire Wire Line
+	4600 1450 4600 1150
+Wire Wire Line
+	4600 1150 4050 1150
+Connection ~ 4050 1150
+Wire Wire Line
+	4600 1650 4600 1550
+Wire Wire Line
+	4600 1650 4600 1850
+Wire Wire Line
+	4600 1850 4050 1850
+Connection ~ 4600 1650
+Connection ~ 4050 1850
+$Comp
+L Device:CP C1
+U 1 1 5F7411E9
+P 5600 1550
+F 0 "C1" H 5718 1596 50  0000 L CNN
+F 1 "470u/35V" H 5718 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 5638 1400 50  0001 C CNN
+F 3 "~" H 5600 1550 50  0001 C CNN
+	1    5600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5F7427D5
+P 6200 1550
+F 0 "C2" H 6318 1596 50  0000 L CNN
+F 1 "470u/35V" H 6318 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 6238 1400 50  0001 C CNN
+F 3 "~" H 6200 1550 50  0001 C CNN
+	1    6200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5F742C00
+P 6800 1550
+F 0 "C3" H 6918 1596 50  0000 L CNN
+F 1 "470u/35V" H 6918 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 6838 1400 50  0001 C CNN
+F 3 "~" H 6800 1550 50  0001 C CNN
+	1    6800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5F74301E
+P 7400 1550
+F 0 "C4" H 7518 1596 50  0000 L CNN
+F 1 "470u/35V" H 7518 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 7438 1400 50  0001 C CNN
+F 3 "~" H 7400 1550 50  0001 C CNN
+	1    7400 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C5
+U 1 1 5F743932
+P 8000 1550
+F 0 "C5" H 8118 1596 50  0000 L CNN
+F 1 "470u/35V" H 8118 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 8038 1400 50  0001 C CNN
+F 3 "~" H 8000 1550 50  0001 C CNN
+	1    8000 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1700 7400 1700
+Connection ~ 6200 1700
+Wire Wire Line
+	6200 1700 5600 1700
+Connection ~ 6800 1700
+Wire Wire Line
+	6800 1700 6200 1700
+Connection ~ 7400 1700
+Wire Wire Line
+	7400 1700 6800 1700
+Wire Wire Line
+	5600 1400 6200 1400
+Connection ~ 6200 1400
+Wire Wire Line
+	6200 1400 6800 1400
+Connection ~ 6800 1400
+Wire Wire Line
+	6800 1400 7400 1400
+Connection ~ 7400 1400
+Wire Wire Line
+	7400 1400 8000 1400
+$Comp
+L power:+12V #PWR03
+U 1 1 5F744951
+P 5600 1400
+F 0 "#PWR03" H 5600 1250 50  0001 C CNN
+F 1 "+12V" H 5615 1573 50  0000 C CNN
+F 2 "" H 5600 1400 50  0001 C CNN
+F 3 "" H 5600 1400 50  0001 C CNN
+	1    5600 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 1400
+$Comp
+L power:GND #PWR04
+U 1 1 5F74501E
+P 5600 1700
+F 0 "#PWR04" H 5600 1450 50  0001 C CNN
+F 1 "GND" H 5605 1527 50  0000 C CNN
+F 2 "" H 5600 1700 50  0001 C CNN
+F 3 "" H 5600 1700 50  0001 C CNN
+	1    5600 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 1700
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5F7460F2
+P 9150 1900
+F 0 "J3" H 9230 1892 50  0000 L CNN
+F 1 "Rheostat" H 9230 1801 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9150 1900 50  0001 C CNN
+F 3 "~" H 9150 1900 50  0001 C CNN
+	1    9150 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F748FFD
+P 8950 2800
+F 0 "#PWR06" H 8950 2550 50  0001 C CNN
+F 1 "GND" H 8955 2627 50  0000 C CNN
+F 2 "" H 8950 2800 50  0001 C CNN
+F 3 "" H 8950 2800 50  0001 C CNN
+	1    8950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5F74A220
+P 9150 2700
+F 0 "J4" H 9230 2692 50  0000 L CNN
+F 1 "Ampere" H 9230 2601 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9150 2700 50  0001 C CNN
+F 3 "~" H 9150 2700 50  0001 C CNN
+	1    9150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5F74B287
+P 9850 2100
+F 0 "J5" H 9930 2092 50  0000 L CNN
+F 1 "Voltage" H 9930 2001 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9850 2100 50  0001 C CNN
+F 3 "~" H 9850 2100 50  0001 C CNN
+	1    9850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR05
+U 1 1 5F74815C
+P 8950 1900
+F 0 "#PWR05" H 8950 1750 50  0001 C CNN
+F 1 "+12V" H 8965 2073 50  0000 C CNN
+F 2 "" H 8950 1900 50  0001 C CNN
+F 3 "" H 8950 1900 50  0001 C CNN
+	1    8950 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR07
+U 1 1 5F74C2C4
+P 9650 2100
+F 0 "#PWR07" H 9650 1950 50  0001 C CNN
+F 1 "+12V" H 9665 2273 50  0000 C CNN
+F 2 "" H 9650 2100 50  0001 C CNN
+F 3 "" H 9650 2100 50  0001 C CNN
+	1    9650 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5F74C703
+P 9650 2200
+F 0 "#PWR08" H 9650 1950 50  0001 C CNN
+F 1 "GND" H 9655 2027 50  0000 C CNN
+F 2 "" H 9650 2200 50  0001 C CNN
+F 3 "" H 9650 2200 50  0001 C CNN
+	1    9650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F74CFDB
+P 10500 750
+F 0 "H1" H 10600 796 50  0000 L CNN
+F 1 "MountingHole" H 10600 705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 10500 750 50  0001 C CNN
+F 3 "~" H 10500 750 50  0001 C CNN
+	1    10500 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F74DE3A
+P 10500 950
+F 0 "H2" H 10600 996 50  0000 L CNN
+F 1 "MountingHole" H 10600 905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 10500 950 50  0001 C CNN
+F 3 "~" H 10500 950 50  0001 C CNN
+	1    10500 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F74DF95
+P 10500 1150
+F 0 "H3" H 10600 1196 50  0000 L CNN
+F 1 "MountingHole" H 10600 1105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 10500 1150 50  0001 C CNN
+F 3 "~" H 10500 1150 50  0001 C CNN
+	1    10500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5F74E1DB
+P 10500 1350
+F 0 "H4" H 10600 1396 50  0000 L CNN
+F 1 "MountingHole" H 10600 1305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 10500 1350 50  0001 C CNN
+F 3 "~" H 10500 1350 50  0001 C CNN
+	1    10500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole ARTWORK1
+U 1 1 5F742CCA
+P 10500 1650
+F 0 "ARTWORK1" H 10600 1696 50  0000 L CNN
+F 1 "DIAL" H 10600 1605 50  0000 L CNN
+F 2 "smopla:dial_0_100" H 10500 1650 50  0001 C CNN
+F 3 "~" H 10500 1650 50  0001 C CNN
+	1    10500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5F74C7A3
+P 8750 2200
+F 0 "SW1" H 8750 2485 50  0000 C CNN
+F 1 "ON/OFF" H 8750 2394 50  0000 C CNN
+F 2 "smopla:MTS-102" H 8750 2200 50  0001 C CNN
+F 3 "~" H 8750 2200 50  0001 C CNN
+	1    8750 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2000 8550 2000
+Wire Wire Line
+	8550 2000 8550 2200
+Wire Wire Line
+	8950 2300 8950 2400
+$Comp
+L Mechanical:Fiducial ARTWORK2
+U 1 1 5F7522E3
+P 10500 1900
+F 0 "ARTWORK2" H 10585 1946 50  0000 L CNN
+F 1 "Fiducial" H 10585 1855 50  0000 L CNN
+F 2 "smopla:QR_CODE_smopla_de" H 10500 1900 50  0001 C CNN
+F 3 "~" H 10500 1900 50  0001 C CNN
+	1    10500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial ARTWORK3
+U 1 1 5F7558CA
+P 10500 2100
+F 0 "ARTWORK3" H 10585 2146 50  0000 L CNN
+F 1 "Fiducial" H 10585 2055 50  0000 L CNN
+F 2 "smopla:LOGO_WHS" H 10500 2100 50  0001 C CNN
+F 3 "~" H 10500 2100 50  0001 C CNN
+	1    10500 2100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
